@@ -87,11 +87,77 @@ keys = {'status'}
 values_list = "dead"
 alternate_world_michael = dean.fromkeys(keys, values_list)
 print(alternate_world_michael)
+# more on this below - maybe don't hit this yet
 
 # pop method
 castiels_status = castiel.pop('status')
 print(castiels_status)
 
 # del method
-del castiel['status']
+del castiel["age"]  # gets rid of key "age" in castiel dictionary
 print(castiel)
+
+# be careful with del method - if you del dean, entire dean dictionary would be deleted.
+# I can type this line then comment it out with gcc
+
+# more on fromkeys
+gabriel = dict.fromkeys(['type', 'status', 'age', 'demeanor'])
+print(gabriel)
+
+# can use a standard set of keys to create new dictionaries
+character = {
+        'type': 'human',
+        'age': 30,
+        'status': 'alive',
+        'demeanor': 'whiny'
+        }
+
+michael = dict.fromkeys(character.keys())
+print(michael)
+
+# setdefault() method
+raphael = dict.fromkeys(character.keys())
+raphael.setdefault('type', "angel")
+raphael.setdefault('age', 400000000)
+raphael.setdefault('status', 'dead')
+raphael.setdefault('title', 'ruler of heaven')  # this is the only item that will change
+print(raphael)
+
+# nesting dictionaries
+supernatural_characters = {
+        'dean': {
+            'type': 'human',
+            'age': 41,
+            'status': 'in heaven',
+            'demeanor': 'cool'
+            },
+        'sam': {
+            'type': 'human',
+            'age': 80,
+            'status': 'in heaven',
+            'demeanor': 'whiny'
+            },
+        'gabriel': {
+            'type': 'archangel',
+            'age': 400000000,
+            'status': 'dead',
+            'demeanor': 'funny'
+            },
+        'crowley': {
+            'type': 'demon',
+            'age': 356,
+            'status': 'dead',
+            'demeanor': 'evil'
+            }
+        }
+
+for character in supernatural_characters.keys():
+    print(character)
+
+for key in supernatural_characters.keys():
+    print(key + ":")
+    print("    " + supernatural_characters[key]['type'])
+    print("    " + str(supernatural_characters[key]['age']))
+    print("    " + supernatural_characters[key]['status'])
+    print("    " + supernatural_characters[key]['demeanor'])
+
