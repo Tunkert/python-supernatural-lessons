@@ -2,6 +2,14 @@
 
 # We'll discuss printing out strings, Concatenation, and f strings.
 
+"""
+potential character names:
+angel - Uriel, Bartholemew, Zachariah, Metatron
+human - sam, dean, bobby, jo, Mary
+demon - Meg, Lilith, Crowley, Azazel, Alastair, Ramiel, Dagon, Asmodeus
+archangel - Michael, Lucifer, Raphael, Gabriel
+"""
+
 print("Castiel is an angel on Supernatural.")
 print("Dean is a human on Supernatural")
 print("Crowley is a demon on Supernatural")
@@ -22,6 +30,13 @@ print(angel + " is an angel on Supernatural.")
 print(human + " is an human on Supernatural.")
 print(demon + " is an demon on Supernatural.")
 print(archangel + " is an archangel on Supernatural.")
+
+
+# Alternative method
+print(angel, " is an angel on Supernatural.")
+print(human, " is a human on Supernatural.")
+print(demon, " is a demon on Supernatural.")
+print(archangel, " is an archangel on Supernatural.")
 
 
 # 3.6 and higher
